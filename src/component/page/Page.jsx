@@ -3,15 +3,16 @@ import { GoArrowRight } from "react-icons/go";
 import ImageSlider from "../cartItem/CartItem";
 import ProductTable from "../productTable/ProductTable";
 import { Link } from "react-router-dom";
-
-const ImageData = ["./public/rec-7.png", "./public/rec_63.png", "./public/rec_61.png"];
+import img1 from '../../assets/rec-7.png'
+import img2 from '../../assets/rec_63.png'
+import img3 from '../../assets/rec_61.png'
+const ImageData = [ img1, img2, img3];
 const Page = () => {
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("M");
   const [selectedColor, setSelectedColor] = useState("");
   const [size, setSize] = useState('Choose...');
   const [color, setColor] = useState('Choose...');
-  
   const handleQuantityChange = (event) => {
     setQuantity(parseInt(event.target.value, 10));
   };
